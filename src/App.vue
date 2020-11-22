@@ -1,8 +1,14 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/login">前往登录页面</router-link>
+      <br/>
+      <router-link to="/notebooks">前往文章列表页面</router-link>
+      <br/>
+      <router-link to="/note/3">查看id为3的文章</router-link>
+      <br/>
+      <router-link to="/trash/2">查看id为2且被删除的文章</router-link>
+      <br/>
     </div>
     <router-view/>
   </div>

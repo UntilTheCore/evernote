@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
+import Login from '@/views/Login.vue';
+import NoteBookList from '@/views/NoteBookList.vue';
+import NoteDetail from '@/views/NoteDetail.vue';
+import TrashDetail from '@/views/TrashDetail.vue';
 
 Vue.use(VueRouter)
 
@@ -17,7 +21,39 @@ const routes: Array<RouteConfig> = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: Login
+  },
+  {
+    path: '/notebooks',
+    name: 'notebooks',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: NoteBookList
+  },
+  {
+    path: '/note/:id',
+    name: 'note',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: NoteDetail
+  },
+  {
+    path: '/trash/:id',
+    name: 'trash',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: TrashDetail
+  },
 ]
 
 const router = new VueRouter({
