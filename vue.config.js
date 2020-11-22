@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'
-    ? '/evernote/'
-    : '/'
+  indexPath:'index.html',
+  assetsDir:'static',
+  publicPath: ''
 }
